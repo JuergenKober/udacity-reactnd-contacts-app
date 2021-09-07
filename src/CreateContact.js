@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class CreateContact extends Component {
   render() {
     return (
-      <div>CreateContact</div>
+      <div>
+        <Link
+          to='/'
+          className='close-create-contact'
+        >Close</Link>
+      </div>
     )
   }
 }
