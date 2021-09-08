@@ -18,6 +18,15 @@ class App extends Component {
       })
   }
 
+  createContact = (contact) => {
+    ContactsAPI.create(contact)
+      .then(() => {
+        this.setState((currentState) => {
+          contacts: currentState.contacts.concat([contact])
+        })
+      })
+  }
+
   removeContact = (contact) => {
     this.setState((currentState) => ({
       contacts: currentState.contacts.filter((c) => {
